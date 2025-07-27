@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -15,8 +16,8 @@ public class MetodosArrayList {
         }
         System.out.println("Lista actual: "+Arrays.toString(nome.toArray()));
 
-        tec.nextLine();
-        System.out.println("Usando o metodo add- index valor");
+        System.out.println("______________________________________");
+        System.out.println("Usando o metódo add- index valor");
         System.out.print("Index: ");
         int index= tec.nextInt();
         tec.nextLine();
@@ -34,7 +35,7 @@ public class MetodosArrayList {
         System.out.println("Nova lista: "+  nome);
 
         //Acessar elementos
-        tec.nextLine();
+        System.out.println("_________________________________________");
         System.out.println("Usando o metodo indexOf e lastIndexOf");
         int primeiro=nome.indexOf("Maria");
         int ultimo=nome.lastIndexOf("Maria");
@@ -43,7 +44,7 @@ public class MetodosArrayList {
 
 
         //Remove
-        tec.nextLine();
+        System.out.println("_____________________________________________");
         System.out.println("Usando o metodo remove index e remove valor");
         nome.remove(0);
         nome.remove("Graciana");
@@ -53,34 +54,40 @@ public class MetodosArrayList {
 
 
         //Tamanho e verificação
-        tec.nextLine();
-        System.out.println("Usando o metodo isEmpty para compara se há conteudo ou não");
+        System.out.println("______________________________________________");
+        System.out.println("Usando o metódo isEmpty para comparar se há conteúdo ou não");
         if (nome.isEmpty()){
-            System.out.println("Sem conteudos");
+            System.out.println("Sem conteúdos");
         }else {
-        System.out.println("Lista actaual: "+nome);
+        System.out.println("Lista actual: "+nome);
         }
 
 
         //Contains
-        tec.nextLine();
-        System.out.println("Usando o metodo Contains para verificar se na lista contem o elemento Pedro");
+        System.out.println("_______________________________________________");
+        System.out.println("Usando o metódo Contains para verificar se na lista contem o elemento Pedro");
         if (nome.contains("Pedro")){
             System.out.println("Pedro existe na lusta"+ nome);
         }else {
             System.out.println("Esse nome não existe na lista");
         }
 
+        //subList
+        System.out.println("_____________________________________________");
+        System.out.println("Usando o metódo Sublist");
+        List<String> subLista= nome.subList(1,4);
+        System.out.println("SubLista: "+subLista);
+
 
         //clear-> eliminar tudo
-        tec.nextLine();
-        System.out.println("Usando o metodo Clean com isEmpty");
+        System.out.println("_____________________________________________");
+        System.out.println("Usando o metódo Clean com isEmpty");
         nome.clear();
 
         if (nome.isEmpty()){
-            System.out.println("Sem conteudos");
+            System.out.println("Sem conteúdos");
         }else {
-            System.out.println("Lista actaual: "+nome);
+            System.out.println("Lista actual: "+nome);
         }
     }
 
